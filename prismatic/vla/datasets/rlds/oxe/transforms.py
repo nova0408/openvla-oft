@@ -846,8 +846,14 @@ def aloha_dataset_transform(trajectory: Dict[str, Any]) -> Dict[str, Any]:
     return trajectory
 
 
+def le_robot_dataset_transform(trajectory: Dict[str, Any]) -> Dict[str, Any]:
+    """The local LeRobot conversion already uses the canonical action/state layout."""
+    return trajectory
+
+
 # === Registry ===
 OXE_STANDARDIZATION_TRANSFORMS = {
+    "le_robot_rlds": le_robot_dataset_transform,
     "bridge_oxe": bridge_oxe_dataset_transform,
     "bridge_orig": bridge_orig_dataset_transform,
     "bridge_dataset": bridge_orig_dataset_transform,
