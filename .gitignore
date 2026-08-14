@@ -151,3 +151,6 @@ data/
 # Rollout videos and wandb logs
 rollouts/
 wandb/
+/modified_libero_rlds
+/LIBERO
+/finetune_log_cp
